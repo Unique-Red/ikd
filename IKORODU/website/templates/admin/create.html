@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <div align="center">
+        <br>
+        <h2>Write about the latest project</h2>
+        <br><br>
+        <div class="formm">
+        <h4>Project Title</h4>
+        <textarea name="title" id="title" class="form-control" placeholder="Project Title" required></textarea>
+        </div>
+        <div class="form">
+        <h4>About project</h4>
+        <textarea name="text" id="text" class="form-control" placeholder="Project details" required></textarea>
+        </div>
+        <br>
+        <input type="file" id="file" name="file" required>
+        <br>
+        <button type="submit" class="btn btn-lg btn-primary">Post</button> 
+           
+    </div>
+    
+    <style>
+        body{
+          background-color: blueviolet;
+          color: white;
+        }
+    </style>
+</form>
+
+{% endblock %}

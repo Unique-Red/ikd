@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Projects
+{% endblock %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+<section id="achievement">
+    <br>
+    <h1 class="heading">Projects</h1>
+    <br>
+    {% for post in posts %}
+    <div class="columns">
+        <div class="box">
+            <a href={{"/post/" + post.slug}}>
+                <img src="{{ url_for('static', filename='uploads/' + post.file) }}" alt="">
+                <h2>{{post.title}}</h2>
+                <p>{{post.text}}</p>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+.columns{
+    grid-template-columns: auto;
+    justify-content: center;
+}
+.box img{
+    width: 375px;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+}
+.box{
+    height: 460px;
+    width: 400px;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+    background-color: purple;
+    align-items: center;
+    text-align: justify;
+}
+.box h2{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box p{
+    font-size: 1rem;
+}

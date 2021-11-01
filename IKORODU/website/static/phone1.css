@@ -1,0 +1,55 @@
+.navbar ul{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.heading{
+    font-size: 1.8rem;
+}
+
+.gallery img{
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.box img{
+    width: 275px;
+    height: 130px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+}
+.box{
+    height: 360px;
+    width: 300px;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+    background-color: purple;
+    align-items: center;
+    text-align: justify;
+}
+.box h2{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box p{
+    font-size: .8rem;
+}
+
+.about{
+    flex-direction: column;
+    background-color: rgba(107, 31, 122, 0.5);
+}
+
+.about h2{
+    text-align: center;
+}
+
+.about img{
+    width: 300px;
+    height: 150px;
+    padding: 0px 15px;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+Post
+{% endblock %}
+{% block content %}
+<section id="achievement">
+    <br>
+    <h1 class="heading">Projects</h1>
+    <br>
+    <div class="columns">
+        <div class="box">
+            <img src="{{ post.file }}" alt="">
+            <h2>{{post.title}}</h2>
+            <p>{{post.file}}</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
