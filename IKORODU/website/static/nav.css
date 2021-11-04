@@ -115,7 +115,7 @@
     border-radius: 20px;
 }
 .box{
-    height: 460px;
+    height: auto;
     width: 500px;
     border-radius: 15px;
     margin: 5px;

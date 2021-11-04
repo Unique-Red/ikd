@@ -11,14 +11,19 @@ Projects
     {% for post in posts %}
     <div class="columns">
         <div class="box">
-            <a href={{"/post/" + post.slug}}>
-                <img src="{{ url_for('static', filename='uploads/' + post.file) }}" alt="">
-                <h2>{{post.title}}</h2>
-                <p>{{post.text}}</p>
-            </a>
+            <img src="{{ url_for('static', filename='uploads/' + post.file) }}" alt="">
+            <h2>{{post.title}}</h2>
+            <p>{{post.text}}</p>
+            
         </div>
     </div>
     {% endfor %}
 </section>
+<style>
+    body{
+      background-color: rgba(107, 31, 122, 0.5);
+      color: white;
+    }
+</style>
 </form>
 {% endblock %}

@@ -11,4 +11,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ikorodu.db'
 
 db = SQLAlchemy(app)
 
+
+from .models import *
+
+
 from website import routes

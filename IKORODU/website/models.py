@@ -7,3 +7,4 @@ class Post(db.Model):
     text = db.Column(db.String(200), nullable=False)
     file = db.Column(db.String(150), nullable=False)
     date_created = db.Column(db.DateTime(timezone=True), default=func.now())
+

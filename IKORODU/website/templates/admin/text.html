@@ -1,0 +1,45 @@
+{% extends "admin/admintable.html" %}
+
+{% block title %}
+    Text
+{% endblock %}
+
+{% block content %}
+<br>
+<table class="table table-sm table-condensed table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Text</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for post in posts %}
+        <tr>
+            <td>{{post.id}}.</td>
+            <td>{{post.text}}</td>
+ 
+            <td>
+               <a href="{{url_for('updatetext', id=post.id)}}" class="btn btn-sm btn-outline btn-info">Edit</a>
+            </td>
+            <td>
+               <a href="" class="btn btn-sm btn-outline btn-danger">Delete</a>
+            </td>
+            {% endfor %}
+
+        </tr>
+        
+    </tbody>
+</table>
+<style>
+    body{
+      background-color: blueviolet;
+      color: white;
+    }
+</style>
+{% endblock %}

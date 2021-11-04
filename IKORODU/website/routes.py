@@ -1,4 +1,5 @@
-from flask import render_template, session, request, redirect, url_for, g
+from flask import render_template, session, request, redirect, url_for, flash
+from sqlalchemy.sql.functions import current_user
 from .models import Post
 from website import app, db
 import os
@@ -25,7 +26,7 @@ def about():
 
 @app.route("/project")
 def project():
-    posts = Post.query.all()
+    posts = Post.query.order_by(Post.date_created.desc()).all()
     return render_template ("project.html", posts=posts)
 
 @app.route("/auth", methods=["GET", "POST"])
@@ -63,4 +64,52 @@ def create():
                 return redirect(url_for('project'))
     return render_template ("admin/create.html")
 
+@app.route("/table", methods=["GET","POST"])
+def table():
+    posts = Post.query.all()
+    return render_template ("admin/table.html", posts=posts)
+
+@app.route("/title", methods=["GET","POST"])
+def title():
+    posts = Post.query.all()
+    return render_template ("admin/title.html", posts=posts)
+
+@app.route("/text", methods=["GET","POST"])
+def text():
+    posts = Post.query.all()
+    return render_template ("admin/text.html", posts=posts)
+
+@app.route("/updatetitle/<int:id>", methods=['GET','POST'])
+def updatetitle(id):
+    updatetitle = Post.query.get(id)
+    title = request.form.get("title")
+    if request.method=="POST":
+        updatetitle.title = title
+        flash(f"Your project has been updated","success")
+        db.session.commit()
+        return redirect(url_for("title"))
+    return render_template("admin/updatetitle.html", updatetitle=updatetitle)
+
+
+
+@app.route("/updatetext/<int:id>", methods=["GET","POST"])
+def updatetext(id):
+    updatetext = Post.query.get(id)
+    text = request.form.get("text")
+    if request.method=="POST":
+        updatetext.text = text
+        flash(f"Your project has been updated","success")
+        db.session.commit()
+        return redirect(url_for("text"))
+
+    return render_template("admin/updatetext.html", updatetext=updatetext)
+
+@app.route("/updatetable/<int:id>", methods=["GET","POST"])
+def updatetable(id):
+    posts = Post.query.get_or_404(id)
+    title = request.form.get("title")
+    text = request.form.get("text")
+    text = request.form.get("text")
+    date_created = request.form.get("date_created")
+    return render_template("admin/updatetable.html", posts=posts, title=title)
 
