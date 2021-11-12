@@ -12,7 +12,6 @@
             <th scope="col">ID</th>
             <th scope="col">Title</th>            
             <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
 
 
 
@@ -22,14 +21,11 @@
 
         {% for post in posts %}
         <tr>
-            <td>{{post.id}}.</td>
+            <td>-</td>
             <td>{{post.title}}</td>
             
             <td>
                <a href="{{url_for('updatetitle', id=post.id)}}" class="btn btn-sm btn-outline btn-info">Edit</a>
-            </td>
-            <td>
-               <a href="" class="btn btn-sm btn-outline btn-danger">Delete</a>
             </td>
             {% endfor %}
 

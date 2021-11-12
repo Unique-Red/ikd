@@ -10,11 +10,9 @@
     <div class="col-md-6">
         <h1 class="text-center mt-5">Update title</h1>
         <form action="" method="POST">
-            <input type="text" title="title" class="form-control" value="{{updatetitle.title}}">
+            <input type="text" name="title"  class="form-control" value="{{title_to_update.title}}">
             <input type="submit" value="Update title" class="btn btn-info mt-2">
-            
         </form>
-        <a href="{{url_for('title')}}" class="btn btn-danger mt-2">Cancel</a>
     </div>
 </div>
 <style>

@@ -1,0 +1,26 @@
+{% extends "admin/admintable.html" %}
+
+{% block title %}
+    Update File
+{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <div align="center">
+        <div>
+        <br>
+        <input type="file" id="file" name="file" required>
+        <br>
+        <button type="submit" class="btn btn-sm btn-info" align="center">Update Image</button> 
+        </div>
+    </div>
+    
+    <style>
+        body{
+          background-color: blue;
+          color: white;
+        }
+    </style>
+</form>
+
+{% endblock %}

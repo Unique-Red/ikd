@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Text</th>
+            <th scope="col">Images</th>
             <th scope="col">Edit</th>
 
 
@@ -21,10 +21,10 @@
         {% for post in posts %}
         <tr>
             <td>-</td>
-            <td>{{post.text}}</td>
+            <td><img src="{{url_for('static', filename='uploads/' + post.file)}}" width="50" height="40"></td>
  
             <td>
-               <a href="{{url_for('updatetext', id=post.id)}}" class="btn btn-sm btn-outline btn-info">Edit</a>
+               <a href="{{url_for('updatefile', id=post.id)}}" class="btn btn-sm btn-outline btn-info">Edit</a>
             </td>
             {% endfor %}
 

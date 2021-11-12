@@ -1,7 +1,18 @@
-.navbar ul{
-    flex-wrap: wrap;
+.navbar{
+    display: flex;
     justify-content: center;
+    height: 40px;
 }
+.navbar ul li{
+    font-size: .8rem;
+}
+.navbar ul li a{
+    padding: 3px 10px;
+}
+.navbar ul li a:hover{
+    border-bottom: 1px solid blueviolet;
+}
+
 .heading{
     font-size: 1.8rem;
 }
@@ -49,7 +60,7 @@
 }
 
 .about img{
-    width: 300px;
+    width: 200px;
     height: 150px;
     padding: 0px 15px;
 }

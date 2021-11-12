@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Login page</title>
+    <title>Register Admin</title>
 </head>
 <body>
     <section class="side">
@@ -17,15 +17,31 @@
         <div class="login-container">
             <p class="title">Welcome</p>
             <div class="separator"></div>
-            <p class="welcome-message">Please, provide login credential to proceed</p>
+            <p class="welcome-message">Register a new admin</p>
 
             <form class="login-form" method="POST">
                 <div class="form-control">
-                    <input type="text" name="username"  placeholder="Enter Username" required>
+                    <input 
+                    type="text"
+                    id="username" 
+                    name="username"  
+                    placeholder="Enter Username" required>
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <input 
+                    type="password" 
+                    id="password1"
+                    name="password1" 
+                    placeholder="Enter Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="form-control">
+                    <input 
+                    type="password" 
+                    id="password2"
+                    name="password2" 
+                    placeholder="Confirm Password" required>
                     <i class="fas fa-lock"></i>
                 </div>
                 <!--{% if failed %}
@@ -44,25 +60,10 @@
                         {% endfor %} 
                     {% endif %} 
                 {% endwith %}
-                
-                <button class="submit">Login</button>
+                <button class="submit" type="submit">Register</button>
             </form>
         </div>
     </section>
-    <!--{% with messages = get_flashed_messages(with_categories=true) %} 
-        {% if messages %} 
-            {% for category, message in messages %} 
-                {% if category =='error' %}
-                    <div class="alert alert-danger alter-dismissible fade show" role="alert" style="color: red;">
-                    {{ message }}
-                    </div>
-                    {% else %}
-                    <div class="alert alert-success alter-dismissible fade show" role="alert">
-                    {{ message }}
-                    </div>
-                {% endif %}    
-            {% endfor %} 
-        {% endif %} 
-    {% endwith %}-->
+    
 </body>
 </html>
