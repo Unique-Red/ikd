@@ -44,11 +44,6 @@
                     placeholder="Confirm Password" required>
                     <i class="fas fa-lock"></i>
                 </div>
-                <!--{% if failed %}
-                <center>
-                    <small style="color: red;">Incorrect Username or Password</small>
-                </center>
-                {% endif %}-->
                 {% with messages = get_flashed_messages(with_categories=true) %} 
                     {% if messages %} 
                         {% for category, message in messages %} 
