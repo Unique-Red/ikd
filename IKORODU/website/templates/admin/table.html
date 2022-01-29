@@ -14,7 +14,6 @@
             <th scope="col">Text</th>
             <th scope="col">Image</th>
             <th scope="col">Date</th>
-            <!--<th scope="col">Edit</th>-->
             <th scope="col">Delete</th>
 
         </tr>
@@ -28,9 +27,6 @@
             <td>{{post.text}}</td>
             <td><img src="{{url_for('static', filename='uploads/' + post.file)}}" width="50" height="40"></td>
             <td>{{post.date_created.strftime('%B %d, %Y')}}</td>
-            <!--<td>
-                <button class="btn btn-outline btn-info btn-sm"><a href="{{url_for('updatetable', id=post.id)}}">Edit</a></button>
-            </td>-->
             <td>
                 <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-danger btn-sm">Delete</button>
 
