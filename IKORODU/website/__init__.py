@@ -6,7 +6,7 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "helloworld"
+app.config['SECRET_KEY'] = "SECRETKEY"
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://Reddington:iloveJesus@1@localhost/ikd'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ikorodu.db'
 
